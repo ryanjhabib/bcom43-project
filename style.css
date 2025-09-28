@@ -28,21 +28,20 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    place-items: center;
     pointer-events: none;
     z-index: 999;
+    overflow: visible;
 }
 
 .fader {
-    position: relative;
+    display: grid; /* overlays children in same grid cell */
+    overflow: visible;
 }
 
 .fader .slide {
-    position: absolute;
-    top: 0;
-    left: 0;
+    grid-area: 1 / 1;
     white-space: nowrap;
     color: #151515;
     font-feature-settings: 'liga' off;
@@ -55,6 +54,10 @@ body {
     opacity: 0;
     transition: opacity 200ms linear;
     will-change: opacity;
+    overflow: visible;
+    padding: 0.12em 0.2em; /* avoids descender clipping on some renderers */
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }
 
 .fader .slide.is-visible {
