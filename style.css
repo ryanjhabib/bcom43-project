@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Oxygen, sans-serif;
     background-color: #fff;
 }
 
@@ -21,12 +21,29 @@ body {
     height: auto;
 }
 
-/* Hello text styling */
-.hello-text {
+/* Centered viewport fader */
+.viewport-center {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 999;
+}
+
+.fader {
+    position: relative;
+}
+
+.fader .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
     color: #151515;
     font-feature-settings: 'liga' off;
     font-family: Oxygen, sans-serif;
@@ -35,5 +52,11 @@ body {
     font-weight: 300;
     line-height: 100%;
     letter-spacing: -2.12px;
-    z-index: 999;
+    opacity: 0;
+    transition: opacity 200ms linear;
+    will-change: opacity;
+}
+
+.fader .slide.is-visible {
+    opacity: 1;
 }
