@@ -24,11 +24,9 @@ body {
 /* Centered viewport fader */
 .viewport-center {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    inset: 0; /* full viewport */
     display: grid;
-    place-items: center;
+    place-items: center; /* center the fader */
     pointer-events: none;
     z-index: 999;
     overflow: visible;
@@ -38,10 +36,14 @@ body {
     display: grid; /* overlays children in same grid cell */
     overflow: visible;
     text-align: center;
+    justify-items: center;
+    align-items: center;
 }
 
 .fader .slide {
     grid-area: 1 / 1;
+    justify-self: center;
+    align-self: center;
     white-space: nowrap;
     color: #151515;
     font-feature-settings: 'liga' off;
@@ -71,4 +73,5 @@ body {
     width: 430px;
     height: auto;
     display: block;
+    margin: 0 auto; /* horizontal center inside the slide */
 }
