@@ -65,3 +65,10 @@ body {
 .fader .slide.is-visible {
     opacity: 1;
 }
+
+/* Headshot image size */
+.headshot {
+    width: 430px;
+    height: auto;
+    display: block;
+}
