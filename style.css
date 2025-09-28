@@ -27,7 +27,6 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
     display: grid;
     place-items: center;
     pointer-events: none;
@@ -38,6 +37,7 @@ body {
 .fader {
     display: grid; /* overlays children in same grid cell */
     overflow: visible;
+    text-align: center;
 }
 
 .fader .slide {
@@ -55,9 +55,11 @@ body {
     transition: opacity 200ms linear;
     will-change: opacity;
     overflow: visible;
-    padding: 0.12em 0.2em; /* avoids descender clipping on some renderers */
+    padding: 0.16em 0.24em; /* avoids descender clipping on some renderers */
+    padding-bottom: 0.28em; /* extra room for descenders like g/y/j */
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+    display: inline-block;
 }
 
 .fader .slide.is-visible {
