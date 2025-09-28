@@ -1,5 +1,5 @@
 // Adjustable scroll interval in pixels between message swaps
-const SCROLL_INTERVAL_PX = 900; // tweak this value to speed up/slow down transitions
+const SCROLL_INTERVAL_PX = 1200; // tweak this value to speed up/slow down transitions
 const FADE_DURATION_MS = 200; // keep in sync with CSS transition
 
 const slides = Array.from(document.querySelectorAll('.fader .slide'));
