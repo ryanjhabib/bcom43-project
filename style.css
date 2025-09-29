@@ -104,6 +104,10 @@ body {
         width: min(85vw, 350px);
         height: min(18vh, 180px);
         border-radius: min(40px, 6vw);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     
     .headshot {
@@ -168,10 +172,10 @@ body {
 
 .beach-image {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+    top: -1px;
+    left: -1px;
+    width: calc(100vw + 2px);
+    height: calc(100vh + 2px);
     object-fit: cover;
     object-position: center;
     margin: 0;
@@ -191,7 +195,7 @@ body {
     backdrop-filter: blur(20px);
     z-index: 5;
     flex-shrink: 0;
-    opacity: 0;
+    opacity: 0.80;
     transition: opacity 200ms linear;
 }
 

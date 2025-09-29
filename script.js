@@ -30,7 +30,7 @@ if (slides.length > 0) {
         const leadershipText = slides[4].querySelector('.leadership-text');
         const modalBackdrop = slides[4].querySelector('.modal-backdrop');
         if (leadershipText) leadershipText.style.opacity = '1';
-        if (modalBackdrop) modalBackdrop.style.opacity = '1';
+        if (modalBackdrop) modalBackdrop.style.opacity = '0.80';
       }
     }
     
