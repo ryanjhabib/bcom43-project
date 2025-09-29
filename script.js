@@ -15,18 +15,22 @@ if (slides.length > 0) {
     const scrollY = window.scrollY;
     let step = Math.max(0, Math.floor(scrollY / SCROLL_INTERVAL_PX));
     
-    // Special handling for beach slide (slide 4) - add short delay before showing leadership text
+    // Special handling for beach slide (slide 4) - add short delay before showing leadership text and modal
     if (step === 4) {
       const beachSlideStart = 4 * SCROLL_INTERVAL_PX;
       const leadershipTextStart = beachSlideStart + LEADERSHIP_DELAY_PX;
       if (scrollY < leadershipTextStart) {
-        // Show beach image without text
+        // Show beach image without text or modal
         const leadershipText = slides[4].querySelector('.leadership-text');
+        const modalBackdrop = slides[4].querySelector('.modal-backdrop');
         if (leadershipText) leadershipText.style.opacity = '0';
+        if (modalBackdrop) modalBackdrop.style.opacity = '0';
       } else {
-        // Show leadership text overlay
+        // Show leadership text and modal overlay
         const leadershipText = slides[4].querySelector('.leadership-text');
+        const modalBackdrop = slides[4].querySelector('.modal-backdrop');
         if (leadershipText) leadershipText.style.opacity = '1';
+        if (modalBackdrop) modalBackdrop.style.opacity = '1';
       }
     }
     
