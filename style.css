@@ -190,7 +190,7 @@ body {
     transform: translate(-50%, -50%);
     width: min(1450px, 90vw);
     height: min(500px, 30vh);
-    border-radius: 100px;
+    border-radius: 120px;
     background: #EDF1F4;
     backdrop-filter: blur(20px);
     z-index: 5;
