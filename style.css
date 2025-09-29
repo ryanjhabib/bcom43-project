@@ -103,3 +103,23 @@ body {
     line-height: 100%;
     letter-spacing: -0.32px;
 }
+
+/* Beach image - full viewport */
+.beach-image {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Leadership text styling */
+.leadership-text {
+    color: #151515;
+    font-feature-settings: 'liga' off;
+    font-family: Oxygen, sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 100%;
+    letter-spacing: -1.28px;
+}
