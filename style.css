@@ -126,6 +126,21 @@ body {
     padding: 0;
 }
 
+/* Modal backdrop */
+.modal-backdrop {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1336px;
+    height: 357px;
+    border-radius: 136.313px;
+    background: #EDF1F4;
+    backdrop-filter: blur(17.08532905578613px);
+    z-index: 5;
+    flex-shrink: 0;
+}
+
 /* Leadership text overlay */
 .leadership-text {
     position: absolute;
