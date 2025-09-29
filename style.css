@@ -133,12 +133,14 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 1336px;
-    height: 357px;
+    height: 400px;
     border-radius: 136.313px;
     background: #EDF1F4;
     backdrop-filter: blur(17.08532905578613px);
     z-index: 5;
     flex-shrink: 0;
+    opacity: 0;
+    transition: opacity 200ms linear;
 }
 
 /* Leadership text overlay */
