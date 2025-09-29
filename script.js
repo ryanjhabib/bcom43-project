@@ -15,12 +15,18 @@ if (slides.length > 0) {
     const scrollY = window.scrollY;
     let step = Math.max(0, Math.floor(scrollY / SCROLL_INTERVAL_PX));
     
-    // Special handling for leadership text (slide 5) - add short delay after beach image (slide 4)
-    if (step === 5) {
-      const beachImageEnd = 4 * SCROLL_INTERVAL_PX;
-      const leadershipStart = beachImageEnd + LEADERSHIP_DELAY_PX;
-      if (scrollY < leadershipStart) {
-        step = 4; // Stay on beach image until delay is reached
+    // Special handling for beach slide (slide 4) - add short delay before showing leadership text
+    if (step === 4) {
+      const beachSlideStart = 4 * SCROLL_INTERVAL_PX;
+      const leadershipTextStart = beachSlideStart + LEADERSHIP_DELAY_PX;
+      if (scrollY < leadershipTextStart) {
+        // Show beach image without text
+        const leadershipText = slides[4].querySelector('.leadership-text');
+        if (leadershipText) leadershipText.style.opacity = '0';
+      } else {
+        // Show leadership text overlay
+        const leadershipText = slides[4].querySelector('.leadership-text');
+        if (leadershipText) leadershipText.style.opacity = '1';
       }
     }
     
