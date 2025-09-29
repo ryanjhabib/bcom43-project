@@ -75,3 +75,31 @@ body {
     display: block;
     margin: 0 auto; /* horizontal center inside the slide */
 }
+
+/* Product Designer slide content */
+.product-designer-content {
+    text-align: left;
+}
+
+.product-designer-content .main-text {
+    color: #151515;
+    font-feature-settings: 'liga' off;
+    font-family: Oxygen, sans-serif;
+    font-size: 106.009px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 100%;
+    letter-spacing: -2.12px;
+    margin-bottom: 20px;
+}
+
+.product-designer-content .subtitle {
+    color: #151515;
+    font-feature-settings: 'liga' off;
+    font-family: Oxygen, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -0.32px;
+}
