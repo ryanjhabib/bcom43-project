@@ -1,7 +1,7 @@
 // Adjustable scroll interval in pixels between message swaps
 const SCROLL_INTERVAL_PX = 800; // tweak this value to speed up/slow down transitions
 const FADE_DURATION_MS = 200; // keep in sync with CSS transition
-const LEADERSHIP_DELAY_PX = 200; // short delay for leadership text after beach image
+const LEADERSHIP_DELAY_PX = 400; // delay for leadership text after beach image
 
 const slides = Array.from(document.querySelectorAll('.fader .slide'));
 if (slides.length > 0) {
